@@ -6,3 +6,9 @@ The Web API to be used with the LoanManagementSystemUI repository.
 dotnet restore
 dotnet run
 ```
+
+To run mssql db on mac using docker: 
+docker run -d --name loanmanagementsystem -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=reallyStrongPwd123' -p 1433:1433 microsoft/mssql-server-linux
+
+Then create the database, tables and insert the ummy data by running the commands found in the CreateLoanDatabase.sql file.
+
