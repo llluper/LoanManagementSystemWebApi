@@ -47,7 +47,6 @@ namespace LoanManagementSystemWebApi
             }
 
             app.UseCors("AllowSpecificOrigin");
-            app.UseHttpsRedirection();
             app.UseMvc();
         }
     }
