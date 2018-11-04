@@ -5,6 +5,7 @@ using System;
 using LoanManagementSystemWebApi.Models;
 using Microsoft.Extensions.Configuration;
 using System.Data.SqlClient;
+using System.Web.Http.Cors;
 
 namespace LoanManagementSystemWebApi.Controllers
 {
@@ -20,6 +21,8 @@ namespace LoanManagementSystemWebApi.Controllers
     }
 
     [HttpGet]
+    [EnableCors(origins: "*", headers: "*", methods: "*")]
+
     public ActionResult<List<LoanItem>> GetAll()
     {
       var items = _context.LoanList.ToList();

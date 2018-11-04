@@ -28,6 +28,11 @@ namespace LoanManagementSystemWebApi
         {
             services.AddDbContext<LoanContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnectionString")));
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            services.AddCors(options =>
+            {
+            options.AddPolicy("AllowSpecificOrigin",
+                builder => builder.WithOrigins("http://localhost:8080"));
+            });
         }
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
@@ -41,6 +46,7 @@ namespace LoanManagementSystemWebApi
                 app.UseHsts();
             }
 
+            app.UseCors("AllowSpecificOrigin");
             app.UseHttpsRedirection();
             app.UseMvc();
         }
