@@ -14,5 +14,5 @@ docker run -d --name loanmanagementsystem -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=rea
 ```
 
 
-Then create the database, tables and insert the ummy data by running the commands found in the CreateLoanDatabase.sql file.
+Create the database, tables and insert the dummy data by running the commands found in the CreateLoanDatabase.sql file.
 
