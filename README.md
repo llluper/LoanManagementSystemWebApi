@@ -1,5 +1,6 @@
 # LoanManagementSystemWebApi
-The Web API to be used with the LoanManagementSystemUI repository.
+The Web API to be used with the [LoanManagementSystemUI](https://github.com/llluper/LoanManagementSystemUI)
+ repository.
 
 ### Restore and run
 ```
